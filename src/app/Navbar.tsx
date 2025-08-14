@@ -9,13 +9,13 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white/80 shadow-lg py-4 px-6 flex justify-between items-center fixed top-0 left-0 z-50 backdrop-blur-md">
-      {/* Logo - Much Larger for Visibility */}
+      {/* Logo - Even Larger for Desktop Visibility */}
       <Link href="/" className="hover:opacity-80 transition-opacity duration-200">
         <Image 
           src="/images/pivotpointlogo.jpg" 
           alt="PivotPoint AI - Return to Homepage" 
-          width={80} 
-          height={80} 
+          width={110} 
+          height={110} 
           className="rounded-lg shadow-md object-cover"
           priority
         />
