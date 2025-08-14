@@ -35,6 +35,19 @@ export default async function Contact() {
         <section className="w-full bg-white/80 rounded-xl shadow-lg p-8 border border-[#d3e3fd] mt-8">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight text-center">Contact</h1>
           <div className="prose prose-lg text-[#1a237e] mx-auto" dangerouslySetInnerHTML={{ __html: html }} />
+          
+          {/* Send Message Button */}
+          <div className="mt-8 text-center">
+            <a 
+              href="mailto:info@pivotpointai.io?subject=Inquiry from PivotPoint AI Website&body=Hello PivotPoint AI team,%0D%0A%0D%0AI'm interested in learning more about your AI solutions.%0D%0A%0D%0ABest regards"
+              className="inline-block bg-[#1a237e] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#4e4f4f] transition-all transform hover:scale-105"
+            >
+              📧 Send Message
+            </a>
+            <p className="mt-3 text-sm text-gray-600">
+              Opens your email client to send a message to info@pivotpointai.io
+            </p>
+          </div>
         </section>
       </main>
     </div>

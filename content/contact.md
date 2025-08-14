@@ -6,15 +6,12 @@ Get in touch with PivotPoint AI to discuss how we can help accelerate your busin
 
 Whether you're looking to implement AI solutions, join our mentorship program, or explore partnership opportunities, we're here to help.
 
-## Contact Information
+## Our Focus Areas
 
-**Email**: info@pivotpointai.io
-
-**Focus Areas**:
-- Caribbean and African markets
-- Small and Medium Enterprises (SMEs)
-- AI implementation and training
-- Business automation solutions
+- **Caribbean and African markets**
+- **Small and Medium Enterprises (SMEs)**
+- **AI implementation and training**
+- **Business automation solutions**
 
 ## How We Can Help
 
@@ -23,6 +20,11 @@ Whether you're looking to implement AI solutions, join our mentorship program, o
 - **Custom Solutions**: Tailored AI solutions for your specific industry needs
 - **Mentorship**: One-on-one guidance from industry experts
 
-## Next Steps
+## Why Choose PivotPoint AI?
 
-Ready to get started? Reach out to us at info@pivotpointai.io and let's discuss how PivotPoint AI can help transform your business with practical, effective AI solutions.
+✅ **Local Expertise**: We understand the unique challenges of emerging markets  
+✅ **Practical Approach**: Real-world, revenue-focused AI strategies  
+✅ **WhatsApp-First**: Solutions designed for how business actually happens  
+✅ **Hands-On Delivery**: We work alongside your team for lasting results
+
+Ready to get started? Use the button below to reach out and let's discuss how PivotPoint AI can help transform your business with practical, effective AI solutions.

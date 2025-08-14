@@ -39,6 +39,19 @@ export default async function Mentorship() {
           <div className="w-full flex justify-center mt-8">
             <Image src="/images/mentor_man_woman.png" alt="Mentorship" width={400} height={300} className="rounded-2xl shadow-lg border border-[#d3e3fd] object-cover opacity-90" />
           </div>
+          
+          {/* Send Message Button */}
+          <div className="mt-8 text-center">
+            <a 
+              href="mailto:info@pivotpointai.io?subject=Mentorship Inquiry from PivotPoint AI Website&body=Hello PivotPoint AI team,%0D%0A%0D%0AI'm interested in learning more about your mentorship programs.%0D%0A%0D%0ABest regards"
+              className="inline-block bg-[#1a237e] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#4e4f4f] transition-all transform hover:scale-105"
+            >
+              📧 Send Message
+            </a>
+            <p className="mt-3 text-sm text-gray-600">
+              Opens your email client to send a message to info@pivotpointai.io
+            </p>
+          </div>
         </section>
       </main>
     </div>
