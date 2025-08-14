@@ -1,0 +1,11 @@
+<!-- This is a placeholder for the favicon image -->
+<!-- You'll need to save your image as one of these formats and names: -->
+
+<!-- Option 1: Save as favicon.ico in src/app/ directory (replaces existing) -->
+<!-- Option 2: Save as favicon.png in public/ directory -->
+
+<!-- For best results, your image should be: -->
+<!-- - 32x32 pixels (minimum) -->
+<!-- - 16x16, 32x32, 48x48, and 64x64 sizes for .ico -->
+<!-- - Square format -->
+<!-- - Simple design that works at small sizes -->
