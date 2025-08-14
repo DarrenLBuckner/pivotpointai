@@ -116,12 +116,12 @@ export default function AdminLogin() {
         <div className="mt-6 text-center">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <p className="text-sm text-blue-800">
-              <strong>Current Credentials (SIMPLIFIED FOR TESTING):</strong><br />
+              <strong>Current Credentials (SECURE VERSION):</strong><br />
               Username: <code className="bg-blue-100 px-1 rounded">Dbuck4Life</code><br />
-              Password: <code className="bg-blue-100 px-1 rounded">Malcolm2009</code>
+              Password: <code className="bg-blue-100 px-1 rounded">Malcolm2009!SecureAdmin*PivotPoint</code>
             </p>
             <p className="text-xs text-blue-600 mt-2">
-              ⚠️ Using simple password for debugging - no special characters
+              ✅ Long, secure password with web-safe special characters (! and *)
             </p>
           </div>
         </div>

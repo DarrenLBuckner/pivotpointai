@@ -4,7 +4,7 @@ import crypto from 'crypto';
 // In a real app, these would be in a database with hashed passwords
 const ADMIN_CREDENTIALS = {
   username: 'Dbuck4Life',
-  password: 'Malcolm2009' // Simplified for testing - no special characters
+  password: 'Malcolm2009!SecureAdmin*PivotPoint' // Long, secure, web-safe special chars
 };
 
 export async function POST(request: Request) {
