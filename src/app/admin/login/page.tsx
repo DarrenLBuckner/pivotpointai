@@ -77,15 +77,16 @@ export default function AdminLogin() {
                 name="password"
                 type={showPassword ? "text" : "password"}
                 required
-                className="relative block w-full px-3 py-2 pr-10 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="relative block w-full px-3 py-2 pr-12 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Password"
                 value={credentials.password}
                 onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
               />
               <button
                 type="button"
-                className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                className="absolute inset-y-0 right-0 pr-3 flex items-center z-20 cursor-pointer hover:text-gray-600"
                 onClick={() => setShowPassword(!showPassword)}
+                aria-label={showPassword ? "Hide password" : "Show password"}
               >
                 {showPassword ? (
                   <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,7 +122,8 @@ export default function AdminLogin() {
               Password: <code className="bg-blue-100 px-1 rounded">Malcolm2009!SecureAdmin*PivotPoint</code>
             </p>
             <p className="text-xs text-blue-600 mt-2">
-              ✅ Long, secure password with web-safe special characters (! and *)
+              ✅ Long, secure password with web-safe special characters (! and *)<br />
+              👁️ Password visibility: {showPassword ? 'SHOWN' : 'HIDDEN'} (for debugging)
             </p>
           </div>
         </div>
