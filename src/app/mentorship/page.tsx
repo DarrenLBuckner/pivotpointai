@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default async function Mentorship() {
   const filePath = path.join(process.cwd(), 'content/mentorship.md');
@@ -33,6 +34,19 @@ export default async function Mentorship() {
         </g>
       </svg>
       <main className="w-full max-w-3xl flex flex-col gap-10 items-center relative z-10 text-[#1a237e]">
+        {/* Get Started Button at the top */}
+        <div className="w-full text-center mt-8">
+          <Link 
+            href="/get-started" 
+            className="inline-block bg-[#1a237e] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#4e4f4f] transition-all transform hover:scale-105"
+          >
+            🚀 Get Started
+          </Link>
+          <p className="mt-3 text-sm text-gray-600">
+            Ready to accelerate your growth with our mentorship program?
+          </p>
+        </div>
+        
         <section className="w-full bg-white/80 rounded-xl shadow-lg p-8 border border-[#d3e3fd] mt-8">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight text-center">Mentorship</h1>
           <div className="prose prose-lg text-[#1a237e] mx-auto" dangerouslySetInnerHTML={{ __html: html }} />

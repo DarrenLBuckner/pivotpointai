@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Services() {
   return (
@@ -53,6 +54,19 @@ export default function Services() {
                 <span className="font-semibold text-[#1a237e]">Cross-Atlantic Partnerships</span>
               </div>
             </div>
+          </div>
+          
+          {/* Get Started Button */}
+          <div className="w-full text-center mt-8">
+            <Link 
+              href="/get-started" 
+              className="inline-block bg-[#1a237e] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#4e4f4f] transition-all transform hover:scale-105"
+            >
+              🚀 Get Started
+            </Link>
+            <p className="mt-3 text-sm text-gray-600">
+              Ready to transform your business with AI? Start your journey today!
+            </p>
           </div>
         </section>
         {/* Roadmap Image Break */}
