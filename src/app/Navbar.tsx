@@ -22,7 +22,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Menu - Hidden on Mobile */}
-      <div className="hidden lg:flex gap-6 text-[#1a237e] font-semibold text-base">
+      <div className="hidden md:flex gap-6 text-[#1a237e] font-semibold text-base">
         <Link href="/" className="hover:text-[#1a237e]/80 transition-colors">Home</Link>
         <Link href="/services" className="hover:text-[#1a237e]/80 transition-colors">Services</Link>
         <Link href="/mentorship" className="hover:text-[#1a237e]/80 transition-colors">Mentorship</Link>
@@ -44,7 +44,7 @@ export default function Navbar() {
       {/* Mobile Menu Button - Shown on Mobile */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="lg:hidden flex flex-col gap-1 p-2"
+        className="md:hidden flex flex-col gap-1 p-2"
         aria-label="Toggle menu"
       >
         <span className={`w-6 h-0.5 bg-[#1a237e] transition-transform ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
@@ -54,7 +54,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg border-t border-gray-200">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg border-t border-gray-200">
           <div className="flex flex-col py-4 px-6 gap-4">
             <Link 
               href="/" 
