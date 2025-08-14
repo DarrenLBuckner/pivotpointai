@@ -112,21 +112,6 @@ export default function AdminLogin() {
             </button>
           </div>
         </form>
-        
-        {/* Temporary Credentials Display - REMOVE LATER */}
-        <div className="mt-6 text-center">
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <p className="text-sm text-blue-800">
-              <strong>Current Credentials (SECURE VERSION):</strong><br />
-              Username: <code className="bg-blue-100 px-1 rounded">Dbuck4Life</code><br />
-              Password: <code className="bg-blue-100 px-1 rounded">Malcolm2009!SecureAdmin*PivotPoint</code>
-            </p>
-            <p className="text-xs text-blue-600 mt-2">
-              ✅ Long, secure password with web-safe special characters (! and *)<br />
-              👁️ Password visibility: {showPassword ? 'SHOWN' : 'HIDDEN'} (for debugging)
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
