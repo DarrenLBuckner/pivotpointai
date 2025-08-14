@@ -4,6 +4,7 @@ import "./globals.css";
 import "../../public/tailwind.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import CookieBanner from "../components/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

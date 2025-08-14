@@ -1,4 +1,6 @@
 -- Create leads table for Get Started form submissions
+-- Note: Cookie consent is handled client-side before form submission
+-- This table only stores data from users who have provided proper consent
 CREATE TABLE IF NOT EXISTS leads (
   id BIGSERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,

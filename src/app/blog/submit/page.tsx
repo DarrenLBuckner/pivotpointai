@@ -84,6 +84,21 @@ export default function SubmitBlog() {
               <label className="block font-semibold mb-1">Content <span className="text-red-500">*</span></label>
               <textarea name="content" className="border rounded px-3 py-2 w-full mb-2" rows={8} required placeholder="Write your blog post here..." />
             </div>
+            
+            {/* Legal Compliance */}
+            <div className="bg-gray-50 rounded-lg p-4">
+              <p className="text-sm text-gray-700">
+                By submitting your blog post, you agree to our{' '}
+                <a href="/terms" target="_blank" className="text-[#1a237e] underline hover:text-[#4e4f4f]">
+                  Terms and Conditions
+                </a>{' '}
+                and{' '}
+                <a href="/privacy" target="_blank" className="text-[#1a237e] underline hover:text-[#4e4f4f]">
+                  Privacy Policy
+                </a>. You grant PivotPoint AI the right to publish and distribute your content.
+              </p>
+            </div>
+            
             <button type="submit" className="bg-[#1a237e] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#4e4f4f] transition w-full">Submit Blog</button>
           </form>
         </section>

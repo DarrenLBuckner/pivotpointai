@@ -359,7 +359,16 @@ export default function GetStarted() {
                   className="mr-2" 
                   required 
                 />
-                <span className="text-sm">I consent to be contacted by PivotPoint AI.</span>
+                <span className="text-sm">
+                  I consent to be contacted by PivotPoint AI and agree to the{' '}
+                  <a href="/privacy" target="_blank" className="text-[#1a237e] underline hover:text-[#4e4f4f]">
+                    Privacy Policy
+                  </a>{' '}
+                  and{' '}
+                  <a href="/terms" target="_blank" className="text-[#1a237e] underline hover:text-[#4e4f4f]">
+                    Terms and Conditions
+                  </a>.
+                </span>
               </div>
             </div>
             <button 
