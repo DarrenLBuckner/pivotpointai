@@ -1,15 +1,25 @@
+/* Custom classes for AI futuristic look */
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glassmorphism {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
