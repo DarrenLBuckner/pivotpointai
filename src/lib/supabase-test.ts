@@ -12,7 +12,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 // Test the connection
 async function testConnection() {
   try {
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('blog_submissions')
       .select('count(*)')
       .limit(1);

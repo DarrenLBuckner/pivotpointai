@@ -10,17 +10,6 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
-interface BlogPost {
-  id: number;
-  name: string;
-  bio: string;
-  country: string;
-  blogtype: string;
-  title: string;
-  content: string;
-  submitted_at: string;
-}
-
 export default async function Blog() {
   // Load intro content
   const filePath = path.join(process.cwd(), 'content/blog_intro.md');
@@ -66,7 +55,7 @@ export default async function Blog() {
             <div className="lg:w-72 flex flex-col items-center bg-gradient-to-br from-[#1a237e] to-[#4e4f4f] rounded-xl p-6 text-white shadow-xl">
               <h3 className="text-xl font-bold mb-3 text-center">Share Your Story</h3>
               <p className="text-sm text-center mb-4 opacity-90">
-                Have insights to share? We'd love to feature your expertise!
+                Have insights to share? We&apos;d love to feature your expertise!
               </p>
               <Link 
                 href="/blog/submit" 
@@ -116,7 +105,7 @@ export default async function Blog() {
                 {/* Author Bio */}
                 {blog.bio && (
                   <div className="bg-gray-50 rounded-lg p-4 mb-4">
-                    <p className="text-sm text-gray-700 italic">"{blog.bio}"</p>
+                    <p className="text-sm text-gray-700 italic">&ldquo;{blog.bio}&rdquo;</p>
                   </div>
                 )}
 
@@ -148,7 +137,7 @@ export default async function Blog() {
             <div className="text-6xl mb-4">📝</div>
             <h2 className="text-2xl font-bold mb-4">Be the First to Share!</h2>
             <p className="text-gray-600 mb-6">
-              We're building a community of thought leaders and innovators. 
+              We&apos;re building a community of thought leaders and innovators. 
               Your insights could inspire others on their AI journey.
             </p>
             <Link 
