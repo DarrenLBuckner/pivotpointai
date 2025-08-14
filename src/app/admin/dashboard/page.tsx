@@ -15,11 +15,30 @@ interface BlogSubmission {
   status: string;
 }
 
+interface ToolboxItem {
+  name: string;
+  url: string;
+  affiliate_url?: string;
+  category?: string;
+  blurb?: string;
+  logo?: string;
+}
+
 export default function AdminDashboard() {
   const [submissions, setSubmissions] = useState<BlogSubmission[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedSubmission, setSelectedSubmission] = useState<BlogSubmission | null>(null);
   const [authenticated, setAuthenticated] = useState(false);
+  const [activeTab, setActiveTab] = useState<'blogs' | 'toolbox'>('blogs');
+  const [toolboxItems, setToolboxItems] = useState<ToolboxItem[]>([]);
+  const [newTool, setNewTool] = useState<Partial<ToolboxItem>>({
+    name: '',
+    url: '',
+    affiliate_url: '',
+    category: 'AI Tools',
+    blurb: '',
+    logo: ''
+  });
   const router = useRouter();
 
   useEffect(() => {
@@ -31,7 +50,22 @@ export default function AdminDashboard() {
     }
     setAuthenticated(true);
     fetchSubmissions();
+    loadToolboxData();
   }, [router]);
+
+  const loadToolboxData = async () => {
+    try {
+      const response = await fetch('/api/admin/toolbox-data');
+      const result = await response.json();
+      if (result.success) {
+        setToolboxItems(result.data || []);
+      } else {
+        console.error('Error loading toolbox data:', result.error);
+      }
+    } catch (error) {
+      console.error('Error loading toolbox data:', error);
+    }
+  };
 
   const logout = () => {
     localStorage.removeItem('admin_token');
@@ -89,6 +123,69 @@ export default function AdminDashboard() {
     }
   };
 
+  const addToolboxItem = async () => {
+    if (!newTool.name || !newTool.url || !newTool.blurb) {
+      alert('Please fill in name, URL, and description');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/admin/toolbox', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newTool),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        loadToolboxData();
+        setNewTool({
+          name: '',
+          url: '',
+          affiliate_url: '',
+          category: 'AI Tools',
+          blurb: '',
+          logo: ''
+        });
+        alert('Tool added successfully!');
+      } else {
+        alert(`Error: ${result.error}`);
+      }
+    } catch (error) {
+      console.error('Error adding tool:', error);
+      alert('Error adding tool. Check console for details.');
+    }
+  };
+
+  const removeToolboxItem = async (name: string) => {
+    if (!confirm(`Are you sure you want to remove "${name}"?`)) return;
+
+    try {
+      const response = await fetch('/api/admin/toolbox', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        loadToolboxData();
+        alert('Tool removed successfully!');
+      } else {
+        alert(`Error: ${result.error}`);
+      }
+    } catch (error) {
+      console.error('Error removing tool:', error);
+      alert('Error removing tool. Check console for details.');
+    }
+  };
+
   if (!authenticated || loading) {
     return <div className="p-8">Loading...</div>;
   }
@@ -112,10 +209,39 @@ export default function AdminDashboard() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        {/* Tabs */}
         <div className="mb-6">
-          <h2 className="text-xl font-semibold text-gray-900">Blog Submissions Management</h2>
-          <p className="text-gray-600">Review and approve blog submissions from your community</p>
+          <nav className="flex space-x-8">
+            <button
+              onClick={() => setActiveTab('blogs')}
+              className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                activeTab === 'blogs'
+                  ? 'border-indigo-500 text-indigo-600'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+            >
+              Blog Management
+            </button>
+            <button
+              onClick={() => setActiveTab('toolbox')}
+              className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                activeTab === 'toolbox'
+                  ? 'border-indigo-500 text-indigo-600'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+            >
+              AI Toolbox Management
+            </button>
+          </nav>
         </div>
+
+        {/* Blog Management Tab */}
+        {activeTab === 'blogs' && (
+          <>
+            <div className="mb-6">
+              <h2 className="text-xl font-semibold text-gray-900">Blog Submissions Management</h2>
+              <p className="text-gray-600">Review and approve blog submissions from your community</p>
+            </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Submissions List */}
@@ -251,6 +377,122 @@ export default function AdminDashboard() {
             )}
           </div>
         </div>
+          </>
+        )}
+
+        {/* AI Toolbox Management Tab */}
+        {activeTab === 'toolbox' && (
+          <>
+            <div className="mb-6">
+              <h2 className="text-xl font-semibold text-gray-900">AI Toolbox Management</h2>
+              <p className="text-gray-600">Manage your affiliate tools and recommendations</p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Add New Tool Form */}
+              <div className="bg-white rounded-lg shadow p-6">
+                <h3 className="text-lg font-medium mb-4">Add New Tool</h3>
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Tool Name</label>
+                    <input
+                      type="text"
+                      value={newTool.name || ''}
+                      onChange={(e) => setNewTool({...newTool, name: e.target.value})}
+                      className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2"
+                      placeholder="e.g., ChatGPT"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Direct URL</label>
+                    <input
+                      type="url"
+                      value={newTool.url || ''}
+                      onChange={(e) => setNewTool({...newTool, url: e.target.value})}
+                      className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2"
+                      placeholder="https://chat.openai.com/"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Affiliate URL (optional)</label>
+                    <input
+                      type="url"
+                      value={newTool.affiliate_url || ''}
+                      onChange={(e) => setNewTool({...newTool, affiliate_url: e.target.value})}
+                      className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2"
+                      placeholder="https://your-affiliate-link.com/"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Category</label>
+                    <select
+                      value={newTool.category || 'AI Tools'}
+                      onChange={(e) => setNewTool({...newTool, category: e.target.value})}
+                      className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2"
+                    >
+                      <option value="AI Tools">AI Tools</option>
+                      <option value="Productivity">Productivity</option>
+                      <option value="Content & Marketing">Content & Marketing</option>
+                      <option value="Data & Analytics">Data & Analytics</option>
+                      <option value="Design & Media">Design & Media</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Description</label>
+                    <textarea
+                      value={newTool.blurb || ''}
+                      onChange={(e) => setNewTool({...newTool, blurb: e.target.value})}
+                      className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2"
+                      rows={3}
+                      placeholder="Brief description of what this tool does..."
+                    />
+                  </div>
+                  
+                  <button
+                    onClick={addToolboxItem}
+                    className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+                  >
+                    Add Tool
+                  </button>
+                </div>
+              </div>
+
+              {/* Current Tools List */}
+              <div className="bg-white rounded-lg shadow overflow-hidden">
+                <div className="px-6 py-4 border-b border-gray-200">
+                  <h3 className="text-lg font-medium">Current Tools ({toolboxItems.length})</h3>
+                </div>
+                <div className="max-h-96 overflow-y-auto">
+                  {toolboxItems.map((tool, index) => (
+                    <div key={index} className="p-4 border-b border-gray-100">
+                      <div className="flex justify-between items-start">
+                        <div className="flex-1">
+                          <h4 className="font-medium text-gray-900">{tool.name}</h4>
+                          <p className="text-sm text-gray-600">{tool.blurb}</p>
+                          <div className="mt-2 text-xs text-gray-500">
+                            <p>Category: {tool.category}</p>
+                            <p>URL: {tool.url}</p>
+                            {tool.affiliate_url && <p>Affiliate: Yes</p>}
+                          </div>
+                        </div>
+                        <button
+                          onClick={() => removeToolboxItem(tool.name)}
+                          className="ml-4 text-red-600 hover:text-red-800"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

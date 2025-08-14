@@ -1,0 +1,15 @@
+# AI Tools Data
+# Categories are up to you. Add more items by copy/paste.
+- name: ChatGPT
+  url: https://chat.openai.com/
+  affiliate_url: https://your-affiliate-link.example/chatai
+  category: AI Tools
+  blurb: "General-purpose assistant for writing, analysis, and ideation."
+  logo: ""  # optional (leave blank to auto-pull site icon)
+
+- name: Notion
+  url: https://www.notion.so/
+  affiliate_url: https://your-affiliate-link.example/notion
+  category: Productivity
+  blurb: "Docs, wikis, and databases for teams."
+  logo: ""  # optional

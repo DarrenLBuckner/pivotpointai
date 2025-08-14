@@ -11,6 +11,8 @@ export default function Footer() {
         <span className="opacity-50">|</span>
         <Link href="/contact" className="hover:underline">Contact</Link>
         <span className="opacity-50">|</span>
+        <Link href="/ai-toolbox" className="hover:underline">AI Toolbox</Link>
+        <span className="opacity-50">|</span>
         <Link href="/privacy" className="hover:underline">Privacy</Link>
         <span className="opacity-50">|</span>
         <Link href="/terms" className="hover:underline">Terms</Link>

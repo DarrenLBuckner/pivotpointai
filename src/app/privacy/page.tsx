@@ -123,8 +123,11 @@ export default function PrivacyPolicy() {
             <p className="mb-4">
               We use cookies and similar technologies to improve site functionality, analyze usage, and deliver relevant content. You can manage or disable cookies in your browser settings.
             </p>
-            <p className="mb-6">
+            <p className="mb-4">
               We may use cookies or tracking links to monitor referral traffic for affiliate purposes. This may involve sharing non-personal click data with our affiliate partners.
+            </p>
+            <p className="mb-6">
+              <strong>Note:</strong> Affiliate links may appear on the <strong>AI Toolbox</strong> page and within related content.
             </p>
 
             <hr className="my-8" />

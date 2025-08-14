@@ -1,0 +1,34 @@
+- name: ChatGPT
+  url: https://chat.openai.com/
+  affiliate_url: https://your-affiliate-link.example/chatgpt
+  category: AI Tools
+  blurb: "General-purpose assistant for writing, analysis, and ideation."
+  logo: ""
+
+- name: Notion
+  url: https://www.notion.so/
+  affiliate_url: https://your-affiliate-link.example/notion
+  category: Productivity
+  blurb: "Docs, wikis, and databases for teams."
+  logo: ""
+
+- name: Claude
+  url: https://claude.ai/
+  affiliate_url: https://your-affiliate-link.example/claude
+  category: AI Tools
+  blurb: "Advanced AI assistant for complex reasoning and analysis."
+  logo: ""
+
+- name: Midjourney
+  url: https://www.midjourney.com/
+  affiliate_url: https://your-affiliate-link.example/midjourney
+  category: AI Tools
+  blurb: "AI-powered image generation for creative projects."
+  logo: ""
+
+- name: GitHub Copilot
+  url: https://github.com/features/copilot
+  affiliate_url: https://your-affiliate-link.example/copilot
+  category: AI Tools
+  blurb: "AI coding assistant that helps write better code faster."
+  logo: ""

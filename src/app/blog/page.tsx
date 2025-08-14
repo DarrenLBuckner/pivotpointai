@@ -3,6 +3,7 @@ import path from 'path';
 import { marked } from 'marked';
 import Link from 'next/link';
 import { createClient } from '@supabase/supabase-js';
+import { BlogSidebar } from '@/components/BlogSidebar';
 
 // Create Supabase client for fetching approved blogs
 const supabase = createClient(
@@ -42,7 +43,9 @@ export default async function Blog() {
         }}
       ></div>
       
-      <main className="w-full max-w-4xl flex flex-col gap-8 items-center relative z-10 text-[#1a237e] mt-8">
+      <main className="w-full max-w-7xl flex gap-8 items-start relative z-10 text-[#1a237e] mt-8">
+        {/* Main Content */}
+        <div className="flex-1 flex flex-col gap-8 items-center">
         {/* Header Section with Submit Button */}
         <section className="w-full bg-white/90 rounded-xl shadow-lg p-8 border border-[#d3e3fd]">
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
@@ -148,6 +151,12 @@ export default async function Blog() {
             </Link>
           </section>
         )}
+        </div>
+
+        {/* Sidebar */}
+        <div className="hidden lg:block w-80">
+          <BlogSidebar />
+        </div>
       </main>
     </div>
   );

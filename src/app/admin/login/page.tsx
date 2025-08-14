@@ -94,16 +94,6 @@ export default function AdminLogin() {
             </button>
           </div>
         </form>
-        
-        <div className="mt-6 text-center">
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-            <p className="text-sm text-yellow-800">
-              <strong>Demo Credentials:</strong><br />
-              Username: admin<br />
-              Password: pivotpoint2025
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.55.0",
+    "@types/js-yaml": "^4.0.9",
     "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
     "marked": "^16.1.2",
     "next": "15.4.6",
     "next-mdx-remote": "^5.0.0",

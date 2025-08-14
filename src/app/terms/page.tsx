@@ -138,14 +138,14 @@ export default function TermsAndConditions() {
 
             <hr className="my-8" />
 
-            <h2 className="text-2xl font-bold mb-4">14. Sponsored Content and Affiliate Links</h2>
+            <h2 className="text-2xl font-bold mb-4">14. Sponsored Content & Affiliate Links (including AI Toolbox)</h2>
             <p className="mb-4">
-              From time to time, PivotPoint AI may feature sponsored content, advertisements, or affiliate links to third-party products and services. This means we may earn a commission or receive compensation if you click on a link or make a purchase through our site or related platforms.
+              From time to time, PivotPoint AI features sponsored content, advertisements, or affiliate links to third-party products and services, including on our <strong>AI Toolbox</strong> page. We may earn a commission or receive compensation if you click a link or make a purchase.
             </p>
             <ul className="list-disc pl-6 mb-6">
-              <li>All such content will be clearly identified as sponsored or affiliate content where required by law.</li>
-              <li>We only promote products or services that we believe may provide value to our users, but we make no warranties or guarantees regarding their quality, performance, or suitability.</li>
-              <li>Any transactions you make with third parties are solely between you and the third party, and we are not responsible for any issues that arise.</li>
+              <li>We disclose sponsored or affiliate content where required by law (e.g., FTC, EU rules).</li>
+              <li>We do not guarantee the quality, performance, or suitability of third-party products/services.</li>
+              <li>Any transactions you make are solely between you and the third party.</li>
             </ul>
           </div>
         </section>

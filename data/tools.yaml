@@ -1,0 +1,44 @@
+# AI Toolbox - Curated list of recommended tools
+# Categories are up to you. Add more items by copy/paste.
+
+- name: ChatGPT
+  url: https://chat.openai.com/
+  affiliate_url: https://your-affiliate-link.example/chatgpt
+  category: AI Tools
+  blurb: "General-purpose assistant for writing, analysis, and ideation."
+  logo: ""  # optional (leave blank to auto-pull site icon)
+
+- name: Notion
+  url: https://www.notion.so/
+  affiliate_url: https://your-affiliate-link.example/notion
+  category: Productivity
+  blurb: "Docs, wikis, and databases for teams."
+  logo: ""  # optional
+
+- name: Claude
+  url: https://claude.ai/
+  affiliate_url: https://your-affiliate-link.example/claude
+  category: AI Tools
+  blurb: "Advanced AI assistant for complex reasoning and analysis."
+  logo: ""
+
+- name: Zapier
+  url: https://zapier.com/
+  affiliate_url: https://your-affiliate-link.example/zapier
+  category: Automation
+  blurb: "Connect apps and automate workflows without coding."
+  logo: ""
+
+- name: Canva
+  url: https://www.canva.com/
+  affiliate_url: https://your-affiliate-link.example/canva
+  category: Design
+  blurb: "Create professional designs with AI-powered tools."
+  logo: ""
+
+- name: Airtable
+  url: https://airtable.com/
+  affiliate_url: https://your-affiliate-link.example/airtable
+  category: Productivity
+  blurb: "Database meets spreadsheet for better organization."
+  logo: ""
