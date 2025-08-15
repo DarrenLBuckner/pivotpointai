@@ -1,34 +1,174 @@
 - name: ChatGPT
   url: https://chat.openai.com/
   affiliate_url: https://your-affiliate-link.example/chatgpt
-  category: AI Tools
-  blurb: "General-purpose assistant for writing, analysis, and ideation."
-  logo: ""
-
-- name: Notion
-  url: https://www.notion.so/
-  affiliate_url: https://your-affiliate-link.example/notion
-  category: Productivity
-  blurb: "Docs, wikis, and databases for teams."
+  category: AI Powerhouses
+  blurb: "The AI assistant that started it all. Perfect for writing, customer service, and business planning."
   logo: ""
 
 - name: Claude
   url: https://claude.ai/
   affiliate_url: https://your-affiliate-link.example/claude
-  category: AI Tools
-  blurb: "Advanced AI assistant for complex reasoning and analysis."
+  category: AI Powerhouses
+  blurb: "Advanced reasoning AI. Excellent for complex analysis, strategy, and technical writing."
   logo: ""
 
-- name: Midjourney
-  url: https://www.midjourney.com/
-  affiliate_url: https://your-affiliate-link.example/midjourney
-  category: AI Tools
-  blurb: "AI-powered image generation for creative projects."
+- name: Perplexity
+  url: https://perplexity.ai/
+  affiliate_url: https://your-affiliate-link.example/perplexity
+  category: AI Powerhouses
+  blurb: "AI-powered search engine that provides accurate, sourced answers for research."
   logo: ""
 
-- name: GitHub Copilot
-  url: https://github.com/features/copilot
-  affiliate_url: https://your-affiliate-link.example/copilot
-  category: AI Tools
-  blurb: "AI coding assistant that helps write better code faster."
+- name: Notion
+  url: https://www.notion.so/
+  affiliate_url: https://your-affiliate-link.example/notion
+  category: Daily Essentials
+  blurb: "All-in-one workspace for notes, docs, databases, and project management."
+  logo: ""
+
+- name: Google Workspace
+  url: https://workspace.google.com/
+  affiliate_url: https://your-affiliate-link.example/google-workspace
+  category: Daily Essentials
+  blurb: "Email, docs, sheets, and drive - essential for any business."
+  logo: ""
+
+- name: Calendly
+  url: https://calendly.com/
+  affiliate_url: https://your-affiliate-link.example/calendly
+  category: Daily Essentials
+  blurb: "Automated scheduling that eliminates back-and-forth emails."
+  logo: ""
+
+- name: QuickBooks
+  url: https://quickbooks.intuit.com/
+  affiliate_url: https://your-affiliate-link.example/quickbooks
+  category: Finance & Accounting
+  blurb: "Industry-standard accounting software for small to medium businesses."
+  logo: ""
+
+- name: FreshBooks
+  url: https://www.freshbooks.com/
+  affiliate_url: https://your-affiliate-link.example/freshbooks
+  category: Finance & Accounting
+  blurb: "Simple invoicing and expense tracking for service-based businesses."
+  logo: ""
+
+- name: Wave
+  url: https://www.waveapps.com/
+  affiliate_url: https://your-affiliate-link.example/wave
+  category: Finance & Accounting
+  blurb: "Free accounting software perfect for small businesses and freelancers."
+  logo: ""
+
+- name: Stripe
+  url: https://stripe.com/
+  affiliate_url: https://your-affiliate-link.example/stripe
+  category: Finance & Accounting
+  blurb: "Accept online payments easily with powerful developer tools."
+  logo: ""
+
+- name: Mailchimp
+  url: https://mailchimp.com/
+  affiliate_url: https://your-affiliate-link.example/mailchimp
+  category: Marketing & Sales
+  blurb: "Email marketing platform with automation and analytics."
+  logo: ""
+
+- name: HubSpot
+  url: https://www.hubspot.com/
+  affiliate_url: https://your-affiliate-link.example/hubspot
+  category: Marketing & Sales
+  blurb: "Complete CRM and marketing automation platform."
+  logo: ""
+
+- name: Buffer
+  url: https://buffer.com/
+  affiliate_url: https://your-affiliate-link.example/buffer
+  category: Marketing & Sales
+  blurb: "Schedule and manage social media posts across all platforms."
+  logo: ""
+
+- name: ConvertKit
+  url: https://convertkit.com/
+  affiliate_url: https://your-affiliate-link.example/convertkit
+  category: Marketing & Sales
+  blurb: "Email marketing built for creators and course sellers."
+  logo: ""
+
+- name: Zapier
+  url: https://zapier.com/
+  affiliate_url: https://your-affiliate-link.example/zapier
+  category: Automation Heroes
+  blurb: "Connect 6000+ apps and automate repetitive workflows without coding."
+  logo: ""
+
+- name: Make
+  url: https://www.make.com/
+  affiliate_url: https://your-affiliate-link.example/make
+  category: Automation Heroes
+  blurb: "Visual automation platform for complex multi-step workflows."
+  logo: ""
+
+- name: IFTTT
+  url: https://ifttt.com/
+  affiliate_url: https://your-affiliate-link.example/ifttt
+  category: Automation Heroes
+  blurb: "Simple automation for everyday apps and devices."
+  logo: ""
+
+- name: Canva
+  url: https://www.canva.com/
+  affiliate_url: https://your-affiliate-link.example/canva
+  category: Creative Studio
+  blurb: "Design anything - social posts, presentations, logos, and more."
+  logo: ""
+
+- name: Figma
+  url: https://www.figma.com/
+  affiliate_url: https://your-affiliate-link.example/figma
+  category: Creative Studio
+  blurb: "Professional design tool for websites, apps, and user interfaces."
+  logo: ""
+
+- name: Loom
+  url: https://www.loom.com/
+  affiliate_url: https://your-affiliate-link.example/loom
+  category: Creative Studio
+  blurb: "Record quick video messages and tutorials to communicate better."
+  logo: ""
+
+- name: Google Analytics
+  url: https://analytics.google.com/
+  affiliate_url: https://your-affiliate-link.example/google-analytics
+  category: Analytics & Insights
+  blurb: "Understand your website traffic and customer behavior."
+  logo: ""
+
+- name: Hotjar
+  url: https://www.hotjar.com/
+  affiliate_url: https://your-affiliate-link.example/hotjar
+  category: Analytics & Insights
+  blurb: "See how users interact with your website through heatmaps and recordings."
+  logo: ""
+
+- name: Slack
+  url: https://slack.com/
+  affiliate_url: https://your-affiliate-link.example/slack
+  category: Team Collaboration
+  blurb: "Team communication platform that organizes conversations by channels."
+  logo: ""
+
+- name: Trello
+  url: https://trello.com/
+  affiliate_url: https://your-affiliate-link.example/trello
+  category: Team Collaboration
+  blurb: "Visual project management using boards, lists, and cards."
+  logo: ""
+
+- name: Asana
+  url: https://asana.com/
+  affiliate_url: https://your-affiliate-link.example/asana
+  category: Team Collaboration
+  blurb: "Project management tool for teams to track work and hit deadlines."
   logo: ""

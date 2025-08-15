@@ -1,12 +1,12 @@
-import { loadToolbox, inferredIconFor, byCategory } from "@/lib/toolbox";
+import { loadToolboxFromDatabase, inferredIconFor, byCategory } from "@/lib/toolbox";
 
 export const metadata = {
   title: "AI Toolbox - Game-Changing Tools for Business Success | PivotPoint AI",
   description: "Discover the exact AI tools PivotPoint AI uses to transform businesses. Hand-picked, battle-tested, and guaranteed to boost your productivity.",
 };
 
-export default function AIToolboxPage() {
-  const items = loadToolbox();
+export default async function AIToolboxPage() {
+  const items = await loadToolboxFromDatabase();
   const cats = byCategory(items);
 
   return (

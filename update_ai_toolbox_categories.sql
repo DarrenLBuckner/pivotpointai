@@ -1,0 +1,67 @@
+-- Update AI Toolbox with new strategic business categories
+-- Clear existing data and insert all new categorized tools
+
+-- First, delete all existing tools to avoid conflicts
+DELETE FROM ai_toolbox;
+
+-- Reset the sequence to start from 1
+ALTER SEQUENCE ai_toolbox_id_seq RESTART WITH 1;
+
+-- Insert all strategic business tools organized by category
+INSERT INTO ai_toolbox (name, url, affiliate_url, category, blurb) VALUES
+
+-- AI Powerhouses (Core AI tools)
+('ChatGPT', 'https://chat.openai.com/', 'https://your-affiliate-link.example/chatgpt', 'AI Powerhouses', 'The AI assistant that started it all. Perfect for writing, customer service, and business planning.'),
+('Claude', 'https://claude.ai/', 'https://your-affiliate-link.example/claude', 'AI Powerhouses', 'Advanced reasoning AI. Excellent for complex analysis, strategy, and technical writing.'),
+('Perplexity', 'https://perplexity.ai/', 'https://your-affiliate-link.example/perplexity', 'AI Powerhouses', 'AI-powered search engine that provides accurate, sourced answers for research.'),
+
+-- Daily Essentials (Everyday business tools)
+('Notion', 'https://www.notion.so/', 'https://your-affiliate-link.example/notion', 'Daily Essentials', 'All-in-one workspace for notes, docs, databases, and project management.'),
+('Google Workspace', 'https://workspace.google.com/', 'https://your-affiliate-link.example/google-workspace', 'Daily Essentials', 'Email, docs, sheets, and drive - essential for any business.'),
+('Calendly', 'https://calendly.com/', 'https://your-affiliate-link.example/calendly', 'Daily Essentials', 'Automated scheduling that eliminates back-and-forth emails.'),
+
+-- Finance & Accounting (Bookkeeping and financial tools)
+('QuickBooks', 'https://quickbooks.intuit.com/', 'https://your-affiliate-link.example/quickbooks', 'Finance & Accounting', 'Industry-standard accounting software for small to medium businesses.'),
+('FreshBooks', 'https://www.freshbooks.com/', 'https://your-affiliate-link.example/freshbooks', 'Finance & Accounting', 'Simple invoicing and expense tracking for service-based businesses.'),
+('Wave', 'https://www.waveapps.com/', 'https://your-affiliate-link.example/wave', 'Finance & Accounting', 'Free accounting software perfect for small businesses and freelancers.'),
+('Stripe', 'https://stripe.com/', 'https://your-affiliate-link.example/stripe', 'Finance & Accounting', 'Accept online payments easily with powerful developer tools.'),
+('PayPal', 'https://www.paypal.com/business/', 'https://your-affiliate-link.example/paypal', 'Finance & Accounting', 'Global payment platform trusted by millions of businesses worldwide.'),
+
+-- Marketing & Sales (Customer acquisition and growth)
+('Mailchimp', 'https://mailchimp.com/', 'https://your-affiliate-link.example/mailchimp', 'Marketing & Sales', 'Email marketing platform with automation and analytics.'),
+('HubSpot', 'https://www.hubspot.com/', 'https://your-affiliate-link.example/hubspot', 'Marketing & Sales', 'Complete CRM and marketing automation platform.'),
+('Buffer', 'https://buffer.com/', 'https://your-affiliate-link.example/buffer', 'Marketing & Sales', 'Schedule and manage social media posts across all platforms.'),
+('ConvertKit', 'https://convertkit.com/', 'https://your-affiliate-link.example/convertkit', 'Marketing & Sales', 'Email marketing built for creators and course sellers.'),
+('Hootsuite', 'https://hootsuite.com/', 'https://your-affiliate-link.example/hootsuite', 'Marketing & Sales', 'Social media management platform for enterprises and agencies.'),
+
+-- Automation Heroes (Workflow automation)
+('Zapier', 'https://zapier.com/', 'https://your-affiliate-link.example/zapier', 'Automation Heroes', 'Connect 6000+ apps and automate repetitive workflows without coding.'),
+('Make', 'https://www.make.com/', 'https://your-affiliate-link.example/make', 'Automation Heroes', 'Visual automation platform for complex multi-step workflows.'),
+('IFTTT', 'https://ifttt.com/', 'https://your-affiliate-link.example/ifttt', 'Automation Heroes', 'Simple automation for everyday apps and devices.'),
+('Microsoft Power Automate', 'https://powerautomate.microsoft.com/', 'https://your-affiliate-link.example/power-automate', 'Automation Heroes', 'Workflow automation integrated with Microsoft 365 ecosystem.'),
+
+-- Creative Studio (Design and content)
+('Canva', 'https://www.canva.com/', 'https://your-affiliate-link.example/canva', 'Creative Studio', 'Design anything - social posts, presentations, logos, and more.'),
+('Figma', 'https://www.figma.com/', 'https://your-affiliate-link.example/figma', 'Creative Studio', 'Professional design tool for websites, apps, and user interfaces.'),
+('Loom', 'https://www.loom.com/', 'https://your-affiliate-link.example/loom', 'Creative Studio', 'Record quick video messages and tutorials to communicate better.'),
+('Adobe Creative Cloud', 'https://www.adobe.com/creativecloud.html', 'https://your-affiliate-link.example/adobe-cc', 'Creative Studio', 'Professional creative suite for design, video, and photography.'),
+('Unsplash', 'https://unsplash.com/', 'https://your-affiliate-link.example/unsplash', 'Creative Studio', 'High-quality stock photos for your business content.'),
+
+-- Analytics & Insights (Data and reporting)
+('Google Analytics', 'https://analytics.google.com/', 'https://your-affiliate-link.example/google-analytics', 'Analytics & Insights', 'Understand your website traffic and customer behavior.'),
+('Hotjar', 'https://www.hotjar.com/', 'https://your-affiliate-link.example/hotjar', 'Analytics & Insights', 'See how users interact with your website through heatmaps and recordings.'),
+('Mixpanel', 'https://mixpanel.com/', 'https://your-affiliate-link.example/mixpanel', 'Analytics & Insights', 'Advanced product analytics to understand user behavior.'),
+('Tableau', 'https://www.tableau.com/', 'https://your-affiliate-link.example/tableau', 'Analytics & Insights', 'Powerful data visualization and business intelligence platform.'),
+
+-- Team Collaboration (Communication and project management)
+('Slack', 'https://slack.com/', 'https://your-affiliate-link.example/slack', 'Team Collaboration', 'Team communication platform that organizes conversations by channels.'),
+('Trello', 'https://trello.com/', 'https://your-affiliate-link.example/trello', 'Team Collaboration', 'Visual project management using boards, lists, and cards.'),
+('Asana', 'https://asana.com/', 'https://your-affiliate-link.example/asana', 'Team Collaboration', 'Project management tool for teams to track work and hit deadlines.'),
+('Microsoft Teams', 'https://www.microsoft.com/microsoft-teams/', 'https://your-affiliate-link.example/teams', 'Team Collaboration', 'Chat, meetings, calling, and collaboration in one platform.'),
+('Monday.com', 'https://monday.com/', 'https://your-affiliate-link.example/monday', 'Team Collaboration', 'Work operating system for managing teams and projects.');
+
+-- Verify the data was inserted correctly
+SELECT category, COUNT(*) as tool_count 
+FROM ai_toolbox 
+GROUP BY category 
+ORDER BY category;

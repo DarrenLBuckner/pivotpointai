@@ -35,7 +35,7 @@ export default function AdminDashboard() {
     name: '',
     url: '',
     affiliate_url: '',
-    category: 'AI Tools',
+    category: 'AI Powerhouses',
     blurb: '',
     logo: ''
   });
@@ -146,7 +146,7 @@ export default function AdminDashboard() {
           name: '',
           url: '',
           affiliate_url: '',
-          category: 'AI Tools',
+          category: 'AI Powerhouses',
           blurb: '',
           logo: ''
         });
@@ -429,15 +429,18 @@ export default function AdminDashboard() {
                   <div>
                     <label className="block text-sm font-medium text-gray-700">Category</label>
                     <select
-                      value={newTool.category || 'AI Tools'}
+                      value={newTool.category || 'AI Powerhouses'}
                       onChange={(e) => setNewTool({...newTool, category: e.target.value})}
                       className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2"
                     >
-                      <option value="AI Tools">AI Tools</option>
-                      <option value="Productivity">Productivity</option>
-                      <option value="Content & Marketing">Content & Marketing</option>
-                      <option value="Data & Analytics">Data & Analytics</option>
-                      <option value="Design & Media">Design & Media</option>
+                      <option value="AI Powerhouses">🤖 AI Powerhouses</option>
+                      <option value="Daily Essentials">⚡ Daily Essentials</option>
+                      <option value="Finance & Accounting">💰 Finance & Accounting</option>
+                      <option value="Marketing & Sales">📈 Marketing & Sales</option>
+                      <option value="Automation Heroes">🔄 Automation Heroes</option>
+                      <option value="Creative Studio">🎨 Creative Studio</option>
+                      <option value="Analytics & Insights">📊 Analytics & Insights</option>
+                      <option value="Team Collaboration">🏢 Team Collaboration</option>
                     </select>
                   </div>
                   
