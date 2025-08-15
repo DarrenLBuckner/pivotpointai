@@ -75,14 +75,14 @@ export default function RootLayout({
                 <meta name="google-site-verification" content="RT9O_dYq27a7U3qtTDd66CDi2f2KqTu56W35g1CNHTc" />
         
         {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-462H8MHEEB"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'GA_MEASUREMENT_ID');
+              gtag('config', 'G-462H8MHEEB');
             `,
           }}
         />
