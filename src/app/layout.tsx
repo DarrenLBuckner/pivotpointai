@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     canonical: "https://pivotpointai.io",
   },
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE", // Replace with actual code
+    google: "ae0d0c3d3f3701c6", // Your Google Search Console verification
   },
   icons: {
     icon: [
