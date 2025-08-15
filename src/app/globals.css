@@ -34,3 +34,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Mobile text legibility improvements */
+@media (max-width: 768px) {
+  /* Make main text white/bright on mobile for better contrast */
+  main h1, main h2, main h3, main h4, main h5, main h6 {
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  }
+  
+  main p {
+    color: #f0f0f0 !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  }
+  
+  /* Ensure link text is also visible */
+  main a:not(.bg-white):not(.bg-\[#d3e3fd\]) {
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  }
+  
+  /* Keep button text as intended */
+  main .bg-\[#1a237e\], main .bg-\[#d3e3fd\], main .bg-white {
+    color: inherit !important;
+    text-shadow: none !important;
+  }
+}
