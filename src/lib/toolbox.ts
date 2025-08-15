@@ -22,17 +22,12 @@ if (supabaseUrl && supabaseKey) {
 }
 
 export async function loadToolboxFromDatabase(): Promise<ToolboxItem[]> {
-  console.log("🔍 Loading toolbox from database...");
-  console.log("Supabase URL:", supabaseUrl ? "✅ Set" : "❌ Missing");
-  console.log("Supabase Key:", supabaseKey ? "✅ Set" : "❌ Missing");
-  
   if (!supabase) {
-    console.log("❌ Supabase not configured, falling back to YAML");
+    console.log("Supabase not configured, falling back to YAML");
     return loadToolboxFromYAML();
   }
 
   try {
-    console.log("🚀 Attempting database connection...");
     const { data, error } = await supabase
       .from('ai_toolbox')
       .select('*')
@@ -40,16 +35,15 @@ export async function loadToolboxFromDatabase(): Promise<ToolboxItem[]> {
       .order('name', { ascending: true });
 
     if (error) {
-      console.error("❌ Database error:", error);
+      console.error("Database error:", error);
       return loadToolboxFromYAML();
     }
 
     if (!data || data.length === 0) {
-      console.log("⚠️ No data in database, falling back to YAML");
+      console.log("No data in database, falling back to YAML");
       return loadToolboxFromYAML();
     }
 
-    console.log(`✅ Loaded ${data.length} tools from database`);
     return data.map((item: any) => ({
       name: item.name,
       url: item.url,
@@ -59,7 +53,7 @@ export async function loadToolboxFromDatabase(): Promise<ToolboxItem[]> {
       logo: item.logo || ""
     }));
   } catch (error) {
-    console.error("❌ Database connection failed:", error);
+    console.error("Database connection failed:", error);
     return loadToolboxFromYAML();
   }
 }

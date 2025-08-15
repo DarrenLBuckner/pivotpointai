@@ -5,8 +5,9 @@ export const metadata = {
   description: "Discover the exact AI tools PivotPoint AI uses to transform businesses. Hand-picked, battle-tested, and guaranteed to boost your productivity.",
 };
 
-// Force revalidation to get fresh data
+// Force revalidation to get fresh data from database
 export const revalidate = 0;
+export const dynamic = 'force-dynamic';
 
 export default async function AIToolboxPage() {
   const items = await loadToolboxFromDatabase();
