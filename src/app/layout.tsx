@@ -19,14 +19,37 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PivotPoint AI - AI Implementation for SMEs in Emerging Markets",
   description: "Practical, low-cost AI solutions to grow sales and cut costs. WhatsApp-first. Hands-on delivery for Caribbean and African markets.",
-  keywords: "AI implementation, business automation, Caribbean AI, African AI, SME technology, AI training, business growth",
+  keywords: "AI implementation, business automation, Caribbean AI, African AI, SME technology, AI training, business growth, emerging markets AI, WhatsApp automation, AI consulting",
   authors: [{ name: "PivotPoint AI" }],
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1",
   openGraph: {
-    title: "PivotPoint AI - AI Implementation for SMEs",
-    description: "Practical, low-cost AI solutions for emerging markets",
+    title: "PivotPoint AI - AI Implementation for SMEs in Emerging Markets",
+    description: "Practical, low-cost AI solutions to grow sales and cut costs. WhatsApp-first. Hands-on delivery for Caribbean and African markets.",
     url: "https://pivotpointai.io",
     siteName: "PivotPoint AI",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://pivotpointai.io/images/pivotpointlogo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PivotPoint AI - AI Implementation for SMEs",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PivotPoint AI - AI Implementation for SMEs",
+    description: "Practical, low-cost AI solutions for emerging markets",
+    images: ["https://pivotpointai.io/images/pivotpointlogo.jpg"],
+  },
+  alternates: {
+    canonical: "https://pivotpointai.io",
+  },
+  verification: {
+    google: "YOUR_GOOGLE_VERIFICATION_CODE", // Replace with actual code
   },
   icons: {
     icon: [
@@ -49,6 +72,55 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'GA_MEASUREMENT_ID');
+            `,
+          }}
+        />
+        
+        {/* Schema.org structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "PivotPoint AI",
+              "url": "https://pivotpointai.io",
+              "logo": "https://pivotpointai.io/images/pivotpointlogo.jpg",
+              "description": "AI implementation and automation solutions for SMEs in emerging markets",
+              "sameAs": [
+                "https://www.linkedin.com/company/pivotpoint-ai",
+                "https://twitter.com/pivotpointai"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-xxx-xxx-xxxx",
+                "contactType": "Customer Service",
+                "availableLanguage": "English"
+              },
+              "areaServed": [
+                "Caribbean",
+                "Africa",
+                "Emerging Markets"
+              ],
+              "serviceType": [
+                "AI Implementation",
+                "Business Automation", 
+                "AI Training",
+                "WhatsApp Automation"
+              ]
+            })
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased pt-20`}

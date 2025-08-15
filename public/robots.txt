@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pivotpointai.io/sitemap.xml
+
+# Block admin areas
+Disallow: /admin/
+Disallow: /api/admin/
+
+# Allow important pages
+Allow: /
+Allow: /services
+Allow: /about
+Allow: /contact
+Allow: /blog
+Allow: /ai-toolbox
+Allow: /mentorship
+Allow: /get-started
+Allow: /plan
+
+# Crawl delay
+Crawl-delay: 1
