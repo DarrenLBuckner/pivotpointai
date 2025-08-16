@@ -16,7 +16,7 @@ export type ToolboxItem = {
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-let supabase: any = null;
+let supabase: ReturnType<typeof createClient> | null = null;
 if (supabaseUrl && supabaseKey) {
   supabase = createClient(supabaseUrl, supabaseKey);
 }
@@ -44,13 +44,13 @@ export async function loadToolboxFromDatabase(): Promise<ToolboxItem[]> {
       return loadToolboxFromYAML();
     }
 
-    return data.map((item: any) => ({
-      name: item.name,
-      url: item.url,
-      affiliate_url: item.affiliate_url,
-      category: item.category,
-      blurb: item.blurb,
-      logo: item.logo || ""
+    return data.map((item: Record<string, unknown>) => ({
+      name: item.name as string,
+      url: item.url as string,
+      affiliate_url: item.affiliate_url as string | undefined,
+      category: item.category as string,
+      blurb: item.blurb as string,
+      logo: (item.logo as string) || ""
     }));
   } catch (error) {
     console.error("Database connection failed:", error);

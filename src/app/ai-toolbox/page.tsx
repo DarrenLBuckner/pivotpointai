@@ -10,6 +10,8 @@ export const revalidate = 0;
 export const dynamic = 'force-dynamic';
 
 export default async function AIToolboxPage() {
+  // Force cache bust with timestamp
+  console.log('AI Toolbox loading at:', new Date().toISOString());
   const items = await loadToolboxFromDatabase();
   const cats = byCategory(items);
 
@@ -23,7 +25,7 @@ export default async function AIToolboxPage() {
         <div className="text-center space-y-6">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1a237e] to-[#0891b2] text-white px-4 py-2 rounded-full text-sm font-semibold">
             <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
-            PivotPoint AI's Secret Weapons
+            PivotPoint AI&apos;s Secret Weapons
           </div>
           
           <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#1a237e] via-[#3949ab] to-[#0891b2] bg-clip-text text-transparent leading-tight">
@@ -58,7 +60,7 @@ export default async function AIToolboxPage() {
             <span className="font-semibold text-amber-800">Transparency First</span>
           </div>
           <p className="text-amber-700">
-            Some links may be affiliate links. We only recommend tools that have personally transformed our clients' businesses. 
+            Some links may be affiliate links. We only recommend tools that have personally transformed our clients&apos; businesses. 
             <span className="font-semibold">Your success = our success.</span>
           </p>
         </div>
