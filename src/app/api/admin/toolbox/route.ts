@@ -62,6 +62,17 @@ export async function POST(request: Request) {
     if (isProduction) {
       // Try Supabase first in production
       try {
+        // First check if tool already exists
+        const { data: existing } = await supabase
+          .from('ai_toolbox')
+          .select('name')
+          .eq('name', newTool.name)
+          .single();
+        
+        if (existing) {
+          return NextResponse.json({ error: 'Tool with this name already exists' }, { status: 400 });
+        }
+
         const { data, error } = await supabase
           .from('ai_toolbox')
           .insert([{
@@ -74,12 +85,24 @@ export async function POST(request: Request) {
           .select();
         
         if (error) {
-          throw error;
+          console.error('Supabase insert error:', error);
+          return NextResponse.json({ 
+            error: 'Database error: ' + error.message,
+            details: error 
+          }, { status: 500 });
         }
         
-        return NextResponse.json({ success: true, message: 'Tool added to database successfully' });
+        return NextResponse.json({ 
+          success: true, 
+          message: 'Tool added to database successfully',
+          tool: data[0]
+        });
       } catch (supabaseError) {
-        console.log('Supabase not available, using file fallback');
+        console.error('Supabase connection error:', supabaseError);
+        return NextResponse.json({ 
+          error: 'Database connection failed',
+          details: supabaseError instanceof Error ? supabaseError.message : 'Unknown database error'
+        }, { status: 500 });
       }
     }
     
