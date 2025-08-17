@@ -75,13 +75,13 @@ export default function Mentorship() {
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
               </Link>
               
-              <a 
-                href="mailto:info@pivotpointai.io?subject=Mentorship Inquiry from PivotPoint AI Website&body=Hello PivotPoint AI team,%0D%0A%0D%0AI'm interested in learning more about your mentorship programs.%0D%0A%0D%0ABest regards"
+              <Link 
+                href="/contact?subject=Mentorship%20Inquiry"
                 className="group relative bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-2xl font-bold text-lg border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all duration-300 shadow-xl"
               >
                 📧 Contact Mentor Team
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
