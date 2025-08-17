@@ -1,0 +1,17 @@
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+  try {
+    return NextResponse.json({ 
+      success: true, 
+      message: 'API is working',
+      timestamp: new Date().toISOString(),
+      environment: process.env.NODE_ENV || 'unknown'
+    });
+  } catch (error) {
+    return NextResponse.json({ 
+      error: 'Health check failed',
+      message: error instanceof Error ? error.message : 'Unknown error'
+    }, { status: 500 });
+  }
+}

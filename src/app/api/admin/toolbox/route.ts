@@ -17,8 +17,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 export async function GET() {
   try {
+    // Always try Supabase first in production
     if (isProduction) {
-      // In production, try to read from Supabase first, fallback to file
       try {
         const { data: tools, error } = await supabase
           .from('ai_toolbox')
@@ -28,13 +28,18 @@ export async function GET() {
         if (!error && tools) {
           return NextResponse.json({ success: true, tools });
         }
+        
+        console.log('Supabase query failed:', error?.message);
+        // If Supabase fails, return empty array instead of trying file system
+        return NextResponse.json({ success: true, tools: [] });
       } catch (supabaseError) {
-        console.log('Supabase not available, using file fallback');
+        console.log('Supabase connection error:', (supabaseError as Error).message);
+        return NextResponse.json({ success: true, tools: [] });
       }
     }
     
-    // Fallback to file system
-    if (fs.existsSync(TOOLBOX_FILE)) {
+    // Only try file system in development
+    if (!isProduction && fs.existsSync(TOOLBOX_FILE)) {
       const fileContent = fs.readFileSync(TOOLBOX_FILE, 'utf8');
       const tools: ToolboxItem[] = yaml.load(fileContent) as ToolboxItem[] || [];
       return NextResponse.json({ success: true, tools });
