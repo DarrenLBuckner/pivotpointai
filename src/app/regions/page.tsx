@@ -8,7 +8,7 @@ export default function RegionsPage() {
   const regions = {
     caribbean: {
       title: "AI Solutions for Caribbean Businesses",
-      countries: ["Jamaica", "Trinidad & Tobago", "Barbados", "Bahamas", "Grenada", "St. Lucia"],
+      countries: ["Jamaica", "Trinidad & Tobago", "Barbados", "Bahamas", "Guyana", "St. Lucia"],
       benefits: [
         "WhatsApp-first approach perfect for Caribbean communication preferences",
         "Low-cost solutions designed for Caribbean SME budgets", 
@@ -19,7 +19,7 @@ export default function RegionsPage() {
     },
     africa: {
       title: "AI Implementation for African Markets",
-      countries: ["South Africa", "Nigeria", "Kenya", "Ghana", "Morocco", "Egypt"],
+      countries: ["South Africa", "Nigeria", "Kenya", "Ghana", "Rwanda", "Namibia"],
       benefits: [
         "Mobile-first AI solutions optimized for African market conditions",
         "Cost-effective automation for growing African businesses",
