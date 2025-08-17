@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
+import WhatsAppQuickAction from '../../components/WhatsAppQuickAction';
 
 export default async function Contact() {
   const filePath = path.join(process.cwd(), 'content/contact.md');
@@ -47,6 +48,27 @@ export default async function Contact() {
             <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-gray-600">
               Opens your email client to send a message to info@pivotpointai.io
             </p>
+            
+            {/* Alternative Contact Methods */}
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <h3 className="text-lg font-semibold mb-4 text-[#1a237e]">
+                Prefer Direct Communication?
+              </h3>
+              <p className="text-sm text-gray-600 mb-4 max-w-md mx-auto">
+                For qualified business inquiries about AI implementation projects, you can reach out directly via WhatsApp:
+              </p>
+              
+              <WhatsAppQuickAction 
+                message="Hi Darren! I found your contact page and I'm seriously interested in discussing AI implementation for my business. Can we schedule a consultation?"
+                buttonText="💬 Message on WhatsApp"
+                variant="outline"
+                className="w-full sm:w-auto"
+              />
+              
+              <p className="mt-3 text-xs text-gray-500">
+                Please include your business details and specific AI needs
+              </p>
+            </div>
           </div>
         </section>
       </main>
