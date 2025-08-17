@@ -83,7 +83,7 @@ export default function GetStarted() {
       const result = await response.json();
 
       if (response.ok) {
-        setSubmitMessage('Thank you! Your information has been submitted successfully. We\'ll be in touch soon!');
+        setSubmitMessage('🎉 Thank you! Your inquiry has been received and is being reviewed by our team. A PivotPoint AI specialist will contact you within 24-48 hours to discuss your AI implementation needs. Please check your email (including spam folder) for a confirmation message.');
         // Reset form
         setFormData({
           name: '',

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 const countries = [
   "United States", "Canada", "United Kingdom", "Australia", "India", "Nigeria", "South Africa", "Kenya", "Germany", "France", "Other"
@@ -11,10 +11,17 @@ const blogTypes = [
 ];
 
 export default function SubmitBlog() {
+  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitError, setSubmitError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   // Blog submission handler
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
+    setIsSubmitting(true);
+    setSubmitError('');
+    setSubmitMessage('');
     
     try {
       const data = {
@@ -36,15 +43,17 @@ export default function SubmitBlog() {
       const result = await res.json();
 
       if (res.ok) {
-        alert('Blog submitted successfully! Thank you for your contribution.');
+        setSubmitMessage('🎉 Thank you for your blog submission! Your content is now under review by our editorial team. We will contact you within 3-5 business days regarding the publication status. Keep an eye on your email for updates!');
         form.reset();
       } else {
         console.error('Submission error:', result);
-        alert(`Submission failed: ${result.error || 'Unknown error'}`);
+        setSubmitError(`Submission failed: ${result.error || 'Please check all required fields and try again.'}`);
       }
     } catch (error) {
       console.error('Network error:', error);
-      alert('Network error. Please check your connection and try again.');
+      setSubmitError('Network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
   return (
@@ -99,7 +108,27 @@ export default function SubmitBlog() {
               </p>
             </div>
             
-            <button type="submit" className="bg-[#1a237e] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#4e4f4f] transition w-full">Submit Blog</button>
+            {/* Success/Error Messages */}
+            {submitMessage && (
+              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                {submitMessage}
+              </div>
+            )}
+            {submitError && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                {submitError}
+              </div>
+            )}
+            
+            <button 
+              type="submit" 
+              disabled={isSubmitting}
+              className={`${
+                isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#1a237e] hover:bg-[#4e4f4f]'
+              } text-white px-6 py-3 rounded-full font-semibold shadow-lg transition w-full`}
+            >
+              {isSubmitting ? 'Submitting...' : 'Submit Blog'}
+            </button>
           </form>
         </section>
       </main>
