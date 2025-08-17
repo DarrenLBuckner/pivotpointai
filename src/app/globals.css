@@ -106,51 +106,58 @@ body {
   line-height: 1.5 !important;
 }
 
-/* Mobile text legibility improvements - Enhanced */
+/* Mobile text legibility improvements - Page-specific */
 @media (max-width: 768px) {
-  /* Force better text visibility on mobile */
-  .text-gray-600, .text-gray-500, .text-gray-400 {
-    color: #1f2937 !important; /* Dark gray instead of light gray */
-    font-weight: 500 !important;
-  }
-  
   /* Make extra small text larger on mobile */
   .text-xs {
     font-size: 0.875rem !important; /* 14px instead of 12px */
   }
   
-  /* Improve main headings contrast */
-  main h1, main h2, main h3, main h4, main h5, main h6 {
+  /* Homepage & Mentorship - Dark backgrounds, keep text light */
+  .from-slate-900 .text-gray-300,
+  .from-slate-900 .text-gray-400,
+  .from-indigo-900 .text-gray-300,
+  .from-indigo-900 .text-gray-400 {
     color: white !important;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    font-weight: 700 !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    font-weight: 500 !important;
   }
   
-  /* Improve paragraph text visibility */
-  main p, main li, main span:not(.bg-white):not(.bg-gray-100) {
+  /* Services page - Light gradient background, make light gray text darker */
+  .from-\[#1a237e\] .text-gray-600,
+  .from-\[#1a237e\] .text-gray-500 {
     color: #1f2937 !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     text-shadow: none !important;
   }
   
-  /* Special handling for cards and containers with white/light backgrounds */
-  .bg-white p, .bg-gray-50 p, .bg-blue-50 p, .bg-orange-50 p, .bg-purple-50 p,
-  .bg-white span, .bg-gray-50 span, .bg-blue-50 span, .bg-orange-50 span, .bg-purple-50 span,
-  .bg-white\/70 p, .bg-white\/70 span {
+  .from-\[#1a237e\] .text-xs {
+    font-size: 0.9rem !important;
     color: #1f2937 !important;
     font-weight: 600 !important;
   }
   
-  /* Ensure link text is visible */
-  main a:not(.bg-white):not(.bg-\[#d3e3fd\]):not(.bg-\[#1a237e\]) {
+  /* AI Toolbox & other light background pages */
+  .bg-white .text-gray-600,
+  .bg-white .text-gray-500,
+  .bg-gray-50 .text-gray-600,
+  .bg-gray-50 .text-gray-500 {
     color: #1f2937 !important;
     font-weight: 600 !important;
-    text-decoration: underline;
+  }
+  
+  /* Cards and containers - force dark text on light backgrounds */
+  .bg-white\/70 p, .bg-white\/70 span,
+  .bg-blue-50 p, .bg-blue-50 span,
+  .bg-orange-50 p, .bg-orange-50 span,
+  .bg-purple-50 p, .bg-purple-50 span {
+    color: #1f2937 !important;
+    font-weight: 600 !important;
   }
   
   /* Keep button text as intended */
-  main .bg-\[#1a237e\], main .bg-\[#d3e3fd\], main .bg-white,
-  main button, main .btn, main [role="button"] {
+  button, .btn, [role="button"],
+  .bg-\[#1a237e\], .bg-\[#d3e3fd\] {
     color: inherit !important;
     text-shadow: none !important;
     font-weight: inherit !important;
