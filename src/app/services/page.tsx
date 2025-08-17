@@ -1,6 +1,18 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "AI Implementation Services - PivotPoint AI",
+  description: "Comprehensive AI implementation services for Caribbean and African SMEs. WhatsApp automation, business intelligence, and process automation solutions.",
+  keywords: "AI services, WhatsApp automation, business automation, AI implementation, Caribbean AI services, African AI solutions",
+  openGraph: {
+    title: "AI Implementation Services - PivotPoint AI",
+    description: "Comprehensive AI implementation services for Caribbean and African SMEs.",
+    url: "https://pivotpointai.io/services",
+  },
+};
 
 export default function Services() {
   return (

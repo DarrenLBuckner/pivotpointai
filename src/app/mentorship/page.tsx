@@ -1,5 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "AI Mentorship & Training - PivotPoint AI",
+  description: "Expert AI mentorship and training programs for Caribbean and African business leaders. Learn to implement AI solutions effectively in your organization.",
+  keywords: "AI mentorship, AI training, business mentorship, AI education, Caribbean AI training, African AI mentorship",
+  openGraph: {
+    title: "AI Mentorship & Training - PivotPoint AI", 
+    description: "Expert AI mentorship and training programs for business leaders.",
+    url: "https://pivotpointai.io/mentorship",
+  },
+};
 
 export default function Mentorship() {
   return (

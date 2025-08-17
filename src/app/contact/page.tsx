@@ -2,6 +2,18 @@ import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
 import WhatsAppQuickAction from '../../components/WhatsAppQuickAction';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Contact PivotPoint AI - Get Your AI Implementation Quote",
+  description: "Contact PivotPoint AI for AI implementation services in Caribbean and African markets. Get a free consultation and project quote.",
+  keywords: "contact PivotPoint AI, AI consultation, AI implementation quote, Caribbean AI services, African AI solutions",
+  openGraph: {
+    title: "Contact PivotPoint AI - Get Your AI Implementation Quote",
+    description: "Contact us for AI implementation services in Caribbean and African markets.",
+    url: "https://pivotpointai.io/contact",
+  },
+};
 
 export default async function Contact() {
   const filePath = path.join(process.cwd(), 'content/contact.md');

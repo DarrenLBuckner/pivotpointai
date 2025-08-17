@@ -4,6 +4,18 @@ import { marked } from 'marked';
 import Link from 'next/link';
 import { createClient } from '@supabase/supabase-js';
 import { BlogSidebar } from '@/components/BlogSidebar';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "AI Implementation Blog - PivotPoint AI",
+  description: "Expert insights on AI implementation, business automation, and digital transformation for Caribbean and African markets.",
+  keywords: "AI blog, business automation insights, AI implementation guides, Caribbean AI, African AI, digital transformation",
+  openGraph: {
+    title: "AI Implementation Blog - PivotPoint AI",
+    description: "Expert insights on AI implementation and digital transformation.",
+    url: "https://pivotpointai.io/blog",
+  },
+};
 
 // Create Supabase client for fetching approved blogs
 const supabase = createClient(
