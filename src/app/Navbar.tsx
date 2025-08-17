@@ -26,6 +26,7 @@ export default function Navbar() {
       <div className="hidden md:flex gap-6 text-[#1a237e] font-semibold text-base">
         <Link href="/" className="hover:text-[#1a237e]/80 transition-colors">Home</Link>
         <Link href="/services" className="hover:text-[#1a237e]/80 transition-colors">Services</Link>
+        <Link href="/regions" className="hover:text-[#1a237e]/80 transition-colors">Regions</Link>
         <Link href="/mentorship" className="hover:text-[#1a237e]/80 transition-colors">Mentorship</Link>
         
         {/* AI Toolbox pill between Mentorship and Blog */}
@@ -70,6 +71,13 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               Services
+            </Link>
+            <Link 
+              href="/regions" 
+              className="text-[#1a237e] font-semibold hover:text-[#1a237e]/80 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Regions
             </Link>
             <Link 
               href="/mentorship" 

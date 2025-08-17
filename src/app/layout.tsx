@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PivotPoint AI - AI Implementation for SMEs in Emerging Markets",
   description: "Practical, low-cost AI solutions to grow sales and cut costs. WhatsApp-first. Hands-on delivery for Caribbean and African markets.",
-  keywords: "AI implementation, business automation, Caribbean AI, African AI, SME technology, AI training, business growth, emerging markets AI, WhatsApp automation, AI consulting",
+  keywords: "AI implementation, business automation, Caribbean AI, African AI, South African AI, SME technology, AI training, business growth, emerging markets AI, WhatsApp automation, AI consulting, Jamaica AI, Trinidad AI, Barbados AI, Nigeria AI, Kenya AI, Ghana AI",
   authors: [{ name: "PivotPoint AI" }],
   robots: "index, follow",
   viewport: "width=device-width, initial-scale=1",
@@ -109,6 +109,34 @@ export default function RootLayout({
                 "availableLanguage": "English"
               },
               "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Jamaica"
+                },
+                {
+                  "@type": "Country", 
+                  "name": "Trinidad and Tobago"
+                },
+                {
+                  "@type": "Country",
+                  "name": "Barbados"
+                },
+                {
+                  "@type": "Country",
+                  "name": "South Africa"
+                },
+                {
+                  "@type": "Country",
+                  "name": "Nigeria"
+                },
+                {
+                  "@type": "Country",
+                  "name": "Kenya"
+                },
+                {
+                  "@type": "Country",
+                  "name": "Ghana"
+                },
                 "Caribbean",
                 "Africa",
                 "Emerging Markets"
