@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
-import { loadToolbox } from '@/lib/toolbox';
+import { loadToolboxFromDatabase } from '@/lib/toolbox';
 
 export async function GET() {
   try {
-    const tools = loadToolbox();
+    const tools = await loadToolboxFromDatabase();
     return NextResponse.json({ success: true, data: tools });
   } catch (error) {
     console.error('Error loading toolbox:', error);

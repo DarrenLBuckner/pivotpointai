@@ -59,6 +59,7 @@ export default function AdminDashboard() {
       const result = await response.json();
       if (result.success) {
         setToolboxItems(result.data || []);
+        console.log('Loaded toolbox items:', result.data?.length || 0);
       } else {
         console.error('Error loading toolbox data:', result.error);
       }

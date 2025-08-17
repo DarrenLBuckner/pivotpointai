@@ -8,16 +8,17 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white/80 shadow-lg py-4 px-6 flex justify-between items-center fixed top-0 left-0 z-50 backdrop-blur-md">
-      {/* Logo - Even Larger for Desktop Visibility */}
+    <nav className="w-full bg-white/80 shadow-lg py-2 sm:py-4 px-4 sm:px-6 flex justify-between items-center fixed top-0 left-0 z-50 backdrop-blur-md">
+      {/* Logo - Clean and Properly Sized */}
       <Link href="/" className="hover:opacity-80 transition-opacity duration-200">
         <Image 
           src="/images/pivotpointlogo.jpg" 
           alt="PivotPoint AI - Return to Homepage" 
-          width={110} 
-          height={110} 
-          className="rounded-lg shadow-md object-cover"
+          width={60} 
+          height={60} 
+          className="rounded-lg shadow-sm object-cover w-12 h-12 sm:w-16 sm:h-16"
           priority
+          quality={100}
         />
       </Link>
 
@@ -44,12 +45,12 @@ export default function Navbar() {
       {/* Mobile Menu Button - Shown on Mobile */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="md:hidden flex flex-col gap-1 p-2"
+        className="md:hidden flex flex-col gap-1 p-2 bg-white/10 rounded-lg backdrop-blur-sm"
         aria-label="Toggle menu"
       >
-        <span className={`w-6 h-0.5 bg-[#1a237e] transition-transform ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-        <span className={`w-6 h-0.5 bg-[#1a237e] transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-        <span className={`w-6 h-0.5 bg-[#1a237e] transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+        <span className={`w-5 h-0.5 bg-[#1a237e] transition-transform ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+        <span className={`w-5 h-0.5 bg-[#1a237e] transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+        <span className={`w-5 h-0.5 bg-[#1a237e] transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
       </button>
 
       {/* Mobile Menu Dropdown */}

@@ -7,7 +7,7 @@ export default async function Contact() {
   const markdown = fs.readFileSync(filePath, 'utf8');
   const html = marked(markdown);
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center p-8 overflow-hidden">
+    <div className="relative min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 overflow-hidden pt-20 sm:pt-24">
       {/* Animated SVG Background (copied from Home) */}
       <svg className="absolute inset-0 w-full h-full z-0" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <defs>
@@ -31,20 +31,20 @@ export default async function Contact() {
           </circle>
         </g>
       </svg>
-      <main className="w-full max-w-3xl flex flex-col gap-10 items-center relative z-10 text-[#1a237e]">
-        <section className="w-full bg-white/80 rounded-xl shadow-lg p-8 border border-[#d3e3fd] mt-8">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight text-center">Contact</h1>
-          <div className="prose prose-lg text-[#1a237e] mx-auto" dangerouslySetInnerHTML={{ __html: html }} />
+      <main className="w-full max-w-3xl flex flex-col gap-8 sm:gap-10 items-center relative z-10 text-[#1a237e] px-4 sm:px-6 lg:px-8">
+        <section className="w-full bg-white/80 rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 border border-[#d3e3fd] mt-6 sm:mt-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 drop-shadow-lg tracking-tight text-center">Contact</h1>
+          <div className="prose prose-sm sm:prose-lg text-[#1a237e] mx-auto" dangerouslySetInnerHTML={{ __html: html }} />
           
           {/* Send Message Button */}
-          <div className="mt-8 text-center">
+          <div className="mt-6 sm:mt-8 text-center">
             <a 
               href="mailto:info@pivotpointai.io?subject=Inquiry from PivotPoint AI Website&body=Hello PivotPoint AI team,%0D%0A%0D%0AI'm interested in learning more about your AI solutions.%0D%0A%0D%0ABest regards"
-              className="inline-block bg-[#1a237e] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-[#4e4f4f] transition-all transform hover:scale-105"
+              className="inline-block bg-[#1a237e] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg shadow-lg hover:bg-[#4e4f4f] transition-all transform hover:scale-105 w-full sm:w-auto"
             >
               📧 Send Message
             </a>
-            <p className="mt-3 text-sm text-gray-600">
+            <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-gray-600">
               Opens your email client to send a message to info@pivotpointai.io
             </p>
           </div>

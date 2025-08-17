@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center p-8 overflow-hidden">
+    <div className="relative min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 overflow-hidden pt-20 sm:pt-24">
       {/* Animated SVG Background (copied from Home) */}
       <svg className="absolute inset-0 w-full h-full z-0" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <defs>
@@ -26,13 +26,13 @@ export default function About() {
           </circle>
         </g>
       </svg>
-      <main className="w-full max-w-3xl flex flex-col gap-10 items-center relative z-10 text-[#1a237e]">
-        <div className="w-full flex justify-center mt-8">
-          <Image src="/images/conference_room.png" alt="PivotPoint AI Team" width={400} height={300} className="rounded-2xl shadow-lg border border-[#d3e3fd] object-cover opacity-90" />
+      <main className="w-full max-w-3xl flex flex-col gap-8 sm:gap-10 items-center relative z-10 text-[#1a237e] px-4 sm:px-6 lg:px-8">
+        <div className="w-full flex justify-center mt-6 sm:mt-8">
+          <Image src="/images/conference_room.png" alt="PivotPoint AI Team" width={400} height={300} className="rounded-xl sm:rounded-2xl shadow-lg border border-[#d3e3fd] object-cover opacity-90 w-full max-w-md sm:max-w-lg" />
         </div>
-        <section className="w-full bg-white/80 rounded-xl shadow-lg p-8 border border-[#d3e3fd] mt-8">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight text-center">About Us</h1>
-          <div className="prose prose-lg text-[#1a237e] mx-auto space-y-6">
+        <section className="w-full bg-white/80 rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 border border-[#d3e3fd] mt-6 sm:mt-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 drop-shadow-lg tracking-tight text-center">About Us</h1>
+          <div className="prose prose-sm sm:prose-lg text-[#1a237e] mx-auto space-y-4 sm:space-y-6">
             <p><strong>At PivotPoint AI, we believe technology should be a bridge</strong> — connecting people, creating opportunities, and closing the gap between potential and prosperity. Our mission is to empower Black and Brown communities across the African diaspora, the Caribbean, and emerging markets with the skills and tools to thrive in the AI era.</p>
             <p>Founded by <strong>Darren Buckner</strong> and <strong>Rochelle Pydana</strong>, our leadership blends African American innovation with deep Caribbean roots. Rochelle was born and raised in Guyana, educated at the University of Guyana and Michigan State University in the U.S., and brings a strong STEM background in science and technology. Darren, an African American entrepreneur who attended the historic HBCU Talladega College, brings decades of business-building experience and a commitment to economic empowerment in underrepresented communities.</p>
             <p>We are rooted in the African American experience, inspired by our love for Africa, and committed to building cross-cultural partnerships that unite Afro-Caribbean, Indo-Guyanese, African, and diaspora innovators.</p>

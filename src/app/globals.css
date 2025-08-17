@@ -15,6 +15,57 @@
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+/* Enterprise-grade animations */
+@keyframes blob {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
 @import "tailwindcss";
 
 :root {
@@ -58,5 +109,48 @@ body {
   main .bg-\[#1a237e\], main .bg-\[#d3e3fd\], main .bg-white {
     color: inherit !important;
     text-shadow: none !important;
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+  /* Improve touch targets */
+  button, a[role="button"], .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Optimize text readability on mobile */
+  h1, h2, h3 {
+    line-height: 1.2;
+    word-break: break-word;
+  }
+  
+  /* Ensure proper spacing for mobile */
+  .prose {
+    line-height: 1.6;
+  }
+  
+  /* Improve input fields on mobile */
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Optimize animations for mobile performance */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Tablet-specific optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Optimize for tablet landscape/portrait */
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
