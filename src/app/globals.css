@@ -86,29 +86,74 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Mobile text legibility improvements */
+/* Universal text readability improvements */
+.text-gray-600 {
+  color: #4b5563 !important; /* Darker gray for better readability */
+}
+
+.text-gray-500 {
+  color: #6b7280 !important; /* Slightly darker */
+}
+
+/* Ensure minimum font sizes for readability */
+.text-xs {
+  font-size: 0.875rem !important; /* 14px instead of 12px */
+  line-height: 1.4 !important;
+}
+
+.text-sm {
+  font-size: 0.95rem !important; /* Slightly larger small text */
+  line-height: 1.5 !important;
+}
+
+/* Mobile text legibility improvements - Enhanced */
 @media (max-width: 768px) {
-  /* Make main text white/bright on mobile for better contrast */
+  /* Force better text visibility on mobile */
+  .text-gray-600, .text-gray-500, .text-gray-400 {
+    color: #1f2937 !important; /* Dark gray instead of light gray */
+    font-weight: 500 !important;
+  }
+  
+  /* Make extra small text larger on mobile */
+  .text-xs {
+    font-size: 0.875rem !important; /* 14px instead of 12px */
+  }
+  
+  /* Improve main headings contrast */
   main h1, main h2, main h3, main h4, main h5, main h6 {
     color: white !important;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    font-weight: 700 !important;
   }
   
-  main p {
-    color: #f0f0f0 !important;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  /* Improve paragraph text visibility */
+  main p, main li, main span:not(.bg-white):not(.bg-gray-100) {
+    color: #1f2937 !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
   }
   
-  /* Ensure link text is also visible */
-  main a:not(.bg-white):not(.bg-\[#d3e3fd\]) {
-    color: white !important;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  /* Special handling for cards and containers with white/light backgrounds */
+  .bg-white p, .bg-gray-50 p, .bg-blue-50 p, .bg-orange-50 p, .bg-purple-50 p,
+  .bg-white span, .bg-gray-50 span, .bg-blue-50 span, .bg-orange-50 span, .bg-purple-50 span,
+  .bg-white\/70 p, .bg-white\/70 span {
+    color: #1f2937 !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Ensure link text is visible */
+  main a:not(.bg-white):not(.bg-\[#d3e3fd\]):not(.bg-\[#1a237e\]) {
+    color: #1f2937 !important;
+    font-weight: 600 !important;
+    text-decoration: underline;
   }
   
   /* Keep button text as intended */
-  main .bg-\[#1a237e\], main .bg-\[#d3e3fd\], main .bg-white {
+  main .bg-\[#1a237e\], main .bg-\[#d3e3fd\], main .bg-white,
+  main button, main .btn, main [role="button"] {
     color: inherit !important;
     text-shadow: none !important;
+    font-weight: inherit !important;
   }
 }
 

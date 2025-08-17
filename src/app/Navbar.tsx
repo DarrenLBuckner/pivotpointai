@@ -9,10 +9,10 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white/80 shadow-lg py-2 sm:py-4 px-4 sm:px-6 flex justify-between items-center fixed top-0 left-0 z-50 backdrop-blur-md">
-      {/* Logo - Clean and Properly Sized */}
+      {/* Logo - Using Clear Africa Logo */}
       <Link href="/" className="hover:opacity-80 transition-opacity duration-200">
         <Image 
-          src="/images/pivotpointlogo.jpg" 
+          src="/images/logo with africa.jpeg" 
           alt="PivotPoint AI - Return to Homepage" 
           width={60} 
           height={60} 
