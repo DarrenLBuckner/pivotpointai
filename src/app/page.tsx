@@ -176,7 +176,7 @@ export default function Home() {
                   <div className="space-y-4 sm:space-y-6">
                     <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                       Founded by <strong className="text-cyan-400">Darren Buckner</strong> (Multi-venture entrepreneur, international business leader) 
-                      and <strong className="text-cyan-400">Rochelle Pydana</strong> (University of Guyana, Michigan State STEM), 
+                      and <strong className="text-cyan-400">Rochelle Pydana Buckner</strong> (University of Guyana, Michigan State STEM), 
                       we understand the unique challenges facing SMEs in emerging markets.
                     </p>
                     
