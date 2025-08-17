@@ -161,6 +161,76 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Our Story Section */}
+        <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-20 bg-gradient-to-br from-slate-800/20 to-blue-900/20 backdrop-blur-sm">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl opacity-50"></div>
+                <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700/50 shadow-2xl">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">
+                    Built by <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Entrepreneurs</span>, 
+                    <br />For Entrepreneurs
+                  </h2>
+                  
+                  <div className="space-y-4 sm:space-y-6">
+                    <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                      Founded by <strong className="text-cyan-400">Darren Buckner</strong> (Multi-venture entrepreneur, international business leader) 
+                      and <strong className="text-cyan-400">Rochelle Pydana</strong> (University of Guyana, Michigan State STEM), 
+                      we understand the unique challenges facing SMEs in emerging markets.
+                    </p>
+                    
+                    <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+                      We&apos;re not just consultants—we&apos;re diaspora entrepreneurs who&apos;ve built businesses 
+                      across the US, Caribbean, and Africa. <span className="text-cyan-400 font-semibold">We know what works because we&apos;ve lived it.</span>
+                    </p>
+                  </div>
+
+                  <div className="flex items-center mt-6 sm:mt-8 text-cyan-400 font-semibold text-sm sm:text-base">
+                    <Link href="/about" className="flex items-center hover:text-white transition-colors duration-300">
+                      Learn Our Full Story <span className="ml-2 transform transition-transform duration-300 hover:translate-x-1">→</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl opacity-50"></div>
+                <div className="relative bg-gradient-to-br from-purple-900/40 to-pink-900/40 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-purple-500/30 shadow-2xl">
+                  <div className="flex items-center mb-4">
+                    <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-pulse mr-3"></div>
+                    <h3 className="text-lg sm:text-xl font-bold text-white">Our Mission</h3>
+                  </div>
+                  
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6">
+                    Ensuring Black and Brown communities don&apos;t miss the opportunities of the digital age 
+                    by making <span className="text-purple-400 font-semibold">enterprise AI accessible and profitable</span>.
+                  </p>
+
+                  <div className="bg-gradient-to-r from-slate-800/60 to-slate-900/60 p-4 rounded-xl border border-slate-700/50">
+                    <div className="flex items-center justify-between text-center">
+                      <div>
+                        <div className="text-xl sm:text-2xl font-bold text-purple-400">12+</div>
+                        <div className="text-xs text-gray-400">Countries Served</div>
+                      </div>
+                      <div className="w-px h-8 bg-slate-600"></div>
+                      <div>
+                        <div className="text-xl sm:text-2xl font-bold text-pink-400">500+</div>
+                        <div className="text-xs text-gray-400">SMEs Helped</div>
+                      </div>
+                      <div className="w-px h-8 bg-slate-600"></div>
+                      <div>
+                        <div className="text-xl sm:text-2xl font-bold text-cyan-400">95%</div>
+                        <div className="text-xs text-gray-400">Success Rate</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Enhanced Empowering Section */}
         <section className="px-4 py-20">
           <div className="max-w-6xl mx-auto">

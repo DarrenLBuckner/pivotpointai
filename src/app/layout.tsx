@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "../../public/tailwind.css";
@@ -16,13 +16,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export const metadata: Metadata = {
   title: "PivotPoint AI - AI Implementation for SMEs in Emerging Markets",
   description: "Practical, low-cost AI solutions to grow sales and cut costs. WhatsApp-first. Hands-on delivery for Caribbean and African markets.",
   keywords: "AI implementation, business automation, Caribbean AI, African AI, South African AI, SME technology, AI training, business growth, emerging markets AI, WhatsApp automation, AI consulting, Jamaica AI, Trinidad AI, Barbados AI, Nigeria AI, Kenya AI, Ghana AI",
   authors: [{ name: "PivotPoint AI" }],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1",
   openGraph: {
     title: "PivotPoint AI - AI Implementation for SMEs in Emerging Markets",
     description: "Practical, low-cost AI solutions to grow sales and cut costs. WhatsApp-first. Hands-on delivery for Caribbean and African markets.",
@@ -71,7 +75,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="google-site-verification" content="RT9O_dYq27a7U3qtTDd66CDi2f2KqTu56W35g1CNHTc" />
         
         {/* Google Analytics */}
